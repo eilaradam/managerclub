@@ -91,6 +91,35 @@ img { max-width: 100%; display: block; }
 }
 .hero-micro { font-size: 0.8rem; opacity: 0.4; margin-top: 16px; color: #000000; }
 
+/* ===== MARQUEE DIVIDER ===== */
+.marquee-divider {
+  background: #000000;
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+.marquee-track span {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #eac794;
+  padding: 0 24px;
+}
+.marquee-track span::after {
+  content: "  |";
+  margin-left: 24px;
+  opacity: 0.4;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ===== 3. TESTIMONIALS ===== */
 .testimonials-carousel {
   display: flex;
@@ -166,16 +195,51 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===== 4. PILLARS ===== */
-.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-bottom: 16px; }
-.pillar-card {
-  background: #111; border: 1px solid #222;
-  border-radius: 16px; padding: 36px 28px;
-  text-align: left; transition: border-color 0.3s;
+.pillar-rows { max-width: 800px; margin: 0 auto 16px; }
+.pillar-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 24px 16px;
+  border-bottom: 1px solid #222;
+  text-align: left;
+  border-radius: 8px;
+  transition: background 0.3s, padding-left 0.3s, border-color 0.3s;
+  cursor: default;
 }
-.pillar-card:hover { border-color: #eac794; }
-.pillar-icon { font-size: 2.2rem; display: block; margin-bottom: 12px; }
-.pillar-card h3 { font-size: 16px; margin-bottom: 8px; color: #eac794; }
-.pillar-card p { font-size: 0.95rem; opacity: 0.7; line-height: 1.6; }
+.pillar-row:hover {
+  background: #111;
+  padding-left: 28px;
+  border-color: #eac794;
+}
+.pillar-row:hover .pillar-num,
+.pillar-row:hover h3 {
+  color: #ffffff;
+}
+.pillar-row:hover p {
+  opacity: 1;
+}
+.pillar-row:last-child { border-bottom: none; }
+.pillar-num {
+  font-size: 14px;
+  font-weight: 800;
+  color: #eac794;
+  flex-shrink: 0;
+  width: 30px;
+}
+.pillar-row h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #eac794;
+  flex-shrink: 0;
+  width: 260px;
+}
+.pillar-row p {
+  font-size: 14px;
+  opacity: 0.6;
+  line-height: 1.5;
+  margin: 0;
+}
 
 /* ===== 5. IA ===== */
 .ia-intro {
@@ -391,6 +455,7 @@ img { max-width: 100%; display: block; }
   .hero-desc { margin: 0 auto 32px; }
   .hero-photo img { max-height: 400px; margin: 0 auto; width: 80%; }
   .video-grid { grid-template-columns: 1fr 1fr; max-width: 400px; margin: 0 auto; }
-  .pillars { grid-template-columns: 1fr; }
+  .pillar-row { flex-direction: column; gap: 8px; }
+  .pillar-row h3 { width: auto; }
   .top-bar { font-size: 0.75rem; letter-spacing: 0; }
 }
