@@ -204,20 +204,24 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===== 8. VIDEO ===== */
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
 .video-slot { text-align: center; }
-.video-placeholder {
-  background: #111; border: 2px dashed #333;
-  border-radius: 12px; padding: 60px 24px;
-  text-align: center; color: #666; min-height: 200px;
-  display: flex; align-items: center; justify-content: center;
-  flex-direction: column;
-  aspect-ratio: 9/16; font-size: 2rem;
-  cursor: pointer; transition: border-color 0.3s;
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
 }
-.video-placeholder:hover { border-color: #eac794; }
+.video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
 .video-caption {
-  font-size: 0.85rem; color: #aaa; margin-top: 10px;
+  font-size: 0.82rem; color: #aaa; margin-top: 10px;
   line-height: 1.4;
 }
 
@@ -336,14 +340,14 @@ img { max-width: 100%; display: block; }
   .carousel-slide { min-width: 240px; }
   .bonus-item { flex-wrap: wrap; }
   .bonus-value { width: 100%; text-align: right; }
-  .video-grid { grid-template-columns: 1fr 1fr; }
+  .video-grid { grid-template-columns: 1fr 1fr; max-width: 500px; margin: 0 auto; }
   .benefit-card { text-align: left; }
   .not-for-you { padding: 20px 24px; }
   .btn-cta-big { padding: 18px 40px; font-size: 1rem; }
 }
 @media (max-width: 480px) {
   .hero-title { font-size: 1.6rem; }
-  .video-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+  .video-grid { grid-template-columns: 1fr 1fr; max-width: 400px; margin: 0 auto; }
   .pillars { grid-template-columns: 1fr; }
   .top-bar { font-size: 0.75rem; letter-spacing: 0; }
 }
