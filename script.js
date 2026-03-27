@@ -1,17 +1,16 @@
-// Carousel
-const carouselState = {};
-
-function moveCarousel(id, direction) {
-  const track = document.querySelector(`#${id} .carousel-track`);
-  const slide = track.querySelector('.carousel-slide');
-  if (!slide) return;
-  const slideWidth = slide.offsetWidth + 16;
-  const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
-
-  if (!carouselState[id]) carouselState[id] = 0;
-  carouselState[id] += direction * slideWidth;
-  carouselState[id] = Math.max(0, Math.min(carouselState[id], maxScroll));
-  track.style.transform = `translateX(-${carouselState[id]}px)`;
+// Testimonial carousel (loop infinito, 2 visíveis)
+let tcIndex = 0;
+function moveTestimonial(dir) {
+  const track = document.querySelector('.tc-track');
+  const cards = track.querySelectorAll('.testimonial-card');
+  const total = cards.length;
+  const maxIndex = total - 2;
+  tcIndex = tcIndex + dir;
+  if (tcIndex > maxIndex) tcIndex = 0;
+  if (tcIndex < 0) tcIndex = maxIndex;
+  const card = cards[0];
+  const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
+  track.style.transform = `translateX(-${tcIndex * cardWidth}px)`;
 }
 
 // Accordion

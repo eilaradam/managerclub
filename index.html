@@ -19,19 +19,19 @@
 
   <!-- 2. HERO -->
   <section class="hero" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <img src="assets/logo.png" alt="Manager Club" class="hero-logo" onerror="this.style.display='none'">
-      <p class="hero-pre">Para creators e profissionais do digital que querem viver de gest&atilde;o de campanhas UGC</p>
-      <h1 class="hero-title">Aprenda a gerir campanhas UGC do zero e construa uma carreira com processo, estrutura e <span class="highlight">renda real.</span></h1>
-      <p class="hero-desc">O m&eacute;todo completo que te leva de creator para gestora de campanhas &mdash; com ferramenta pr&oacute;pria, comunidade ativa e acompanhamento de quem vive isso na pr&aacute;tica.</p>
-      <a href="#lista-espera" class="btn-cta">QUERO MINHA VAGA AGORA</a>
-      <p class="hero-price">
-        <span class="price-old">De R$ 997</span>
-        <span class="price-new">R$ 697</span>
-        <span class="price-installment">ou 12x de R$ 68,08</span>
-      </p>
-      <p class="hero-micro">Acesso imediato &middot; Garantia de 7 dias &middot; Pagamento seguro</p>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <img src="assets/logo.png" alt="Manager Club" class="hero-logo">
+          <h1 class="hero-title">Aprenda a gerir campanhas UGC do zero com processo, estrutura e renda</h1>
+          <p class="hero-desc">M&eacute;todo + Ferramenta de IA + Comunidade ativa.<br>Tudo pra te levar de creator a gestora de campanhas.</p>
+          <a href="#lista-espera" class="btn-cta">QUERO MINHA VAGA AGORA</a>
+          <p class="hero-micro">Acesso imediato &middot; Garantia de 7 dias &middot; Pagamento seguro</p>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/lara-bio.jpg" alt="Lara Dam">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -40,43 +40,69 @@
     <div class="container">
       <h2>Quem passou pelo Manager Club j&aacute; sabe: <span class="highlight-dark">processo funciona.</span></h2>
       <p class="section-sub">Resultados reais de alunas reais. Sem filtro, sem promessa &mdash; s&oacute; execu&ccedil;&atilde;o.</p>
-      <div class="carousel" id="carousel-depoimentos">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 1<br><small>Adicione imagem em assets/depoimento-1.jpg</small></div>
-            <p class="slide-caption">&ldquo;Primeira marca fechada em 14 dias&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 2<br><small>Adicione imagem em assets/depoimento-2.jpg</small></div>
-            <p class="slide-caption">&ldquo;Saiu do zero e hoje gere 3 marcas&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 3<br><small>Adicione imagem em assets/depoimento-3.jpg</small></div>
-            <p class="slide-caption">&ldquo;Organizou a carreira inteira com o m&eacute;todo&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 4<br><small>Adicione imagem em assets/depoimento-4.jpg</small></div>
-            <p class="slide-caption">&ldquo;Fechou contrato recorrente no primeiro m&ecirc;s&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 5<br><small>Adicione imagem em assets/depoimento-5.jpg</small></div>
-            <p class="slide-caption">&ldquo;Largou o emprego e vive 100% de gest&atilde;o UGC&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 6<br><small>Adicione imagem em assets/depoimento-6.jpg</small></div>
-            <p class="slide-caption">&ldquo;Entendeu precifica&ccedil;&atilde;o e triplicou o ticket&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 7<br><small>Adicione imagem em assets/depoimento-7.jpg</small></div>
-            <p class="slide-caption">&ldquo;Campanha entregue sem estresse pela primeira vez&rdquo;</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="testimonial-placeholder">Depoimento 8<br><small>Adicione imagem em assets/depoimento-8.jpg</small></div>
-            <p class="slide-caption">&ldquo;Resultado que veio do b&aacute;sico bem feito&rdquo;</p>
+      <div class="testimonials-carousel">
+        <button class="tc-btn tc-prev" onclick="moveTestimonial(-1)">&larr;</button>
+        <div class="tc-viewport">
+          <div class="tc-track">
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-1.jpg" alt="Aluna 1" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Primeira marca fechada em 14 dias. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-2.jpg" alt="Aluna 2" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Saiu do zero e hoje gere 3 marcas. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-3.jpg" alt="Aluna 3" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Organizou a carreira inteira com o m&eacute;todo. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-4.jpg" alt="Aluna 4" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Fechou contrato recorrente no primeiro m&ecirc;s. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-5.jpg" alt="Aluna 5" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Largou o emprego e vive 100% de gest&atilde;o UGC. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-6.jpg" alt="Aluna 6" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Entendeu precifica&ccedil;&atilde;o e triplicou o ticket. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-7.jpg" alt="Aluna 7" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Campanha entregue sem estresse pela primeira vez. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-8.jpg" alt="Aluna 8" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Resultado que veio do b&aacute;sico bem feito. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="carousel-btn prev" onclick="moveCarousel('carousel-depoimentos', -1)">&larr;</button>
-        <button class="carousel-btn next" onclick="moveCarousel('carousel-depoimentos', 1)">&rarr;</button>
+        <button class="tc-btn tc-next" onclick="moveTestimonial(1)">&rarr;</button>
       </div>
     </div>
   </section>
@@ -222,25 +248,25 @@
       <div class="video-grid">
         <div class="video-slot">
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/0ccjvOvYwZQ" title="Depoimento Vit&oacute;ria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/0ccjvOvYwZQ?modestbranding=1&rel=0&showinfo=0&controls=1" title="Depoimento Vit&oacute;ria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="video-caption">Vit&oacute;ria &mdash; Fechou campanha gringa com pagamento em Euro nas primeiras semanas</p>
         </div>
         <div class="video-slot">
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/4GCoQSiaMxU" title="Depoimento Dhiovanna" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/4GCoQSiaMxU?modestbranding=1&rel=0&showinfo=0&controls=1" title="Depoimento Dhiovanna" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="video-caption">Dhiovanna &mdash; Fechou o primeiro contrato antes do curso acabar</p>
         </div>
         <div class="video-slot">
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/AMy-g-4bXJg" title="Depoimento Marina" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/AMy-g-4bXJg?modestbranding=1&rel=0&showinfo=0&controls=1" title="Depoimento Marina" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="video-caption">Marina &mdash; Cobrava R$500, hoje cobra mais de R$2.000. Recuperou o investimento no meio das aulas</p>
         </div>
         <div class="video-slot">
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/xPuvV7AA6eU" title="Depoimento Julia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/xPuvV7AA6eU?modestbranding=1&rel=0&showinfo=0&controls=1" title="Depoimento Julia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="video-caption">Julia &mdash; O resultado veio antes de terminar o curso. Destravou e aumentou os clientes</p>
         </div>
@@ -468,15 +494,14 @@
   <section class="section section-light" id="bio">
     <div class="container bio-container">
       <div class="bio-image">
-        <div class="placeholder-img bio-photo">Sua foto<br><small>Adicione em assets/lara-bio.jpg</small></div>
+        <img src="assets/lara-bio.jpg" alt="Lara Dam" class="bio-photo">
       </div>
       <div class="bio-text">
         <h2>Quem &eacute; a <span class="highlight-dark">Lara Dam?</span></h2>
-        <p>Lara Damasceno foi uma das primeiras profissionais no Brasil a falar de gest&atilde;o de campanhas UGC como carreira.</p>
-        <p>N&atilde;o come&ccedil;ou querendo ensinar. Come&ccedil;ou trabalhando. Bastidor, organiza&ccedil;&atilde;o, processo. Enquanto outros apareciam, ela entregava. Fez campanha funcionar quando ningu&eacute;m ainda chamava isso de profiss&atilde;o.</p>
-        <p>J&aacute; geriu campanhas de marcas grandes, trabalhou com m&uacute;ltiplos nichos e dezenas de creators ao mesmo tempo. Construiu m&eacute;todo na pr&aacute;tica &mdash; errando, ajustando e fazendo de novo at&eacute; funcionar.</p>
-        <p>Criou o Manager Club porque percebeu que o mercado precisava de algu&eacute;m que ensinasse o que realmente fazia. Sem f&oacute;rmula m&aacute;gica. Sem promessa de facilidade. Com processo, estrutura e verdade.</p>
-        <p>Hoje, al&eacute;m de mentora, &eacute; criadora do MeuManager IA &mdash; o primeiro app pensado exclusivamente pra gestoras de campanhas UGC organizarem clientes, financeiro, agenda e conte&uacute;do num s&oacute; lugar.</p>
+        <p>A Lara Dam foi a primeira profissional no Brasil a falar de gest&atilde;o de campanhas UGC como carreira. N&atilde;o come&ccedil;ou querendo ensinar. Come&ccedil;ou trabalhando. Bastidor, organiza&ccedil;&atilde;o, processo. Enquanto outros apareciam, ela entregava.</p>
+        <p>J&aacute; geriu campanhas de marcas grandes, m&uacute;ltiplos nichos e dezenas de creators. Construiu m&eacute;todo na pr&aacute;tica: errando, ajustando e fazendo de novo at&eacute; funcionar.</p>
+        <p>Criou o <strong class="highlight-dark">Manager Club</strong> porque o mercado precisava de algu&eacute;m que ensinasse o que realmente fazia. Sem f&oacute;rmula m&aacute;gica. Com processo, estrutura e verdade.</p>
+        <p>Hoje, al&eacute;m de mentora, &eacute; criadora do MeuManager, o primeiro app pra gestoras de campanhas UGC organizarem clientes, financeiro, agenda e conte&uacute;do num s&oacute; lugar.</p>
         <p class="bio-quote">&ldquo;O b&aacute;sico bem feito funciona. Sempre funcionou.&rdquo;</p>
         <a href="#lista-espera" class="btn-cta">QUERO APRENDER COM A LARA</a>
       </div>
