@@ -1015,8 +1015,9 @@ body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
   .tc-btn { width: 32px; height: 32px; font-size: 0.8rem; flex-shrink: 0; }
 
   /* Audience */
-  .audience-columns { grid-template-columns: 1fr; gap: 16px; }
+  .audience-columns { grid-template-columns: 1fr; gap: 16px; text-align: center; }
   .audience-col-header { font-size: 11px; padding: 8px 14px; }
+  .audience-col-list li { text-align: center; justify-content: center; }
 
   /* Bio */
   .bio-container { flex-direction: column; text-align: center; gap: 32px; }
