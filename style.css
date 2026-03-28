@@ -575,13 +575,11 @@ img { max-width: 100%; display: block; }
 .accordion-icon { font-size: 1.5rem; font-weight: 300; transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
 .accordion-item.active .accordion-icon { transform: rotate(45deg); }
 .accordion-body {
-  max-height: 0;
-  overflow: hidden !important;
-  transition: max-height 0.4s ease;
-  padding: 0 16px !important;
+  display: none;
+  padding: 0 16px 16px;
 }
 .accordion-item.active .accordion-body {
-  padding: 0 16px 16px !important;
+  display: block;
 }
 .accordion-body ul { padding: 0 0 20px 20px; }
 .accordion-body li { padding: 10px 0; font-size: 0.95rem; opacity: 0.8; list-style: disc; line-height: 1.6; }

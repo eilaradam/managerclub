@@ -42,18 +42,15 @@ function moveTestimonial(dir, id) {
 // Accordion
 function toggleAccordion(btn) {
   const item = btn.parentElement;
-  const body = item.querySelector('.accordion-body');
   const isActive = item.classList.contains('active');
 
   // Close all siblings
   item.parentElement.querySelectorAll('.accordion-item').forEach(i => {
     i.classList.remove('active');
-    i.querySelector('.accordion-body').style.maxHeight = null;
   });
 
   if (!isActive) {
     item.classList.add('active');
-    body.style.maxHeight = body.scrollHeight + 'px';
   }
 }
 
