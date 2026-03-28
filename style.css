@@ -61,13 +61,13 @@ img { max-width: 100%; display: block; }
 
 /* ===== 2. HERO ===== */
 .hero {
-  min-height: 90vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   background: #FFF8F2;
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 20px 0;
   color: #000000;
 }
 .hero::after {
@@ -102,7 +102,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-text { text-align: left; }
 .hero-photo { display: flex; align-items: center; justify-content: flex-start; overflow: visible; }
-.hero-photo img { width: 140%; max-width: none; max-height: 728px; object-fit: contain; border-radius: 16px; margin-left: -20%; }
+.hero-photo img { width: 180%; max-width: none; object-fit: contain; border-radius: 0; margin-left: -30%; }
 .hero-badge {
   display: inline-block;
   font-size: 13px;
