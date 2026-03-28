@@ -397,40 +397,89 @@ img { max-width: 100%; display: block; }
   text-align: center;
   margin-bottom: 40px;
 }
-.audience-lines {
+.audience-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  background: #1B1B1B;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.audience-watermark {
+  position: absolute;
+  font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: #eac794;
+  opacity: 0.08;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+.audience-watermark--left {
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+}
+.audience-watermark--right {
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+.audience-col { position: relative; z-index: 1; }
+.audience-col-header {
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+.audience-col-header--yes {
+  background: #eac794;
+  color: #000000;
+}
+.audience-col-header--no {
+  background: #C8441A;
+  color: #ffffff;
+}
+.audience-col-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 600px;
-  margin: 0 auto 48px;
+  gap: 16px;
 }
-.audience-line {
+.audience-col-list li {
+  font-family: 'DM Sans', 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  text-align: left;
+  align-items: flex-start;
+  gap: 10px;
 }
-.audience-check {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  background: #C8441A;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
+.audience-col--yes .audience-col-list li { color: #ffffff; }
+.audience-col--no .audience-col-list li { color: rgba(255,255,255,0.7); }
+.audience-yes {
+  color: #22C55E;
   font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1.3;
 }
-.audience-line p { font-size: 16px; color: #333; line-height: 1.4; margin: 0; }
-
-.audience-coral-statement {
-  font-size: 22px;
-  font-weight: 800;
+.audience-no {
   color: #C8441A;
-  text-align: center;
-  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1.3;
 }
 
 /* ===== 8. VIDEO ===== */
@@ -562,6 +611,8 @@ img { max-width: 100%; display: block; }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
+  .audience-columns { grid-template-columns: 1fr; padding: 28px 24px; }
+  .audience-watermark { display: none; }
   .ia-wrapper { flex-direction: column; }
   .bio-container { flex-direction: column; text-align: center; }
   .bio-image { flex: none; width: 200px; margin: 0 auto; }
