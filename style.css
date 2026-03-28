@@ -38,6 +38,8 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 .btn-cta { animation: pulse-glow 2s ease-in-out infinite; }
+.btn-cta-coral { background: #C8441A; color: #ffffff; }
+.btn-cta-coral:hover { box-shadow: 0 8px 32px rgba(200, 68, 26, 0.35); }
 .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(234, 199, 148, 0.35); animation: none; }
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(234, 199, 148, 0); transform: scale(1); }
@@ -408,28 +410,6 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
 }
-.audience-watermark {
-  position: absolute;
-  font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 120px;
-  text-transform: uppercase;
-  color: #eac794;
-  opacity: 0.08;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 0;
-}
-.audience-watermark--left {
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-}
-.audience-watermark--right {
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-}
 .audience-col { position: relative; z-index: 1; }
 .audience-col-header {
   font-weight: 800;
@@ -612,7 +592,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
   .audience-columns { grid-template-columns: 1fr; padding: 28px 24px; }
-  .audience-watermark { display: none; }
   .ia-wrapper { flex-direction: column; }
   .bio-container { flex-direction: column; text-align: center; }
   .bio-image { flex: none; width: 200px; margin: 0 auto; }
