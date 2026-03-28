@@ -585,16 +585,14 @@ img { max-width: 100%; display: block; }
 
 .bonus-lupa {
   position: absolute;
-  left: -15%;
-  top: 15%;
+  left: -12%;
+  top: 20%;
   transform: rotate(-25deg);
-  width: 40%;
-  max-width: 450px;
-  opacity: 0.9;
+  width: 38%;
+  max-width: 420px;
   pointer-events: none;
-  z-index: 0;
+  z-index: 10;
 }
-#bonus .container { position: relative; z-index: 1; }
 
 /* ===== 13. BONUS ===== */
 .bonus-cards-grid {
