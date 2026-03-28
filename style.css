@@ -341,8 +341,9 @@ img { max-width: 100%; display: block; }
   transition: background 0.2s, color 0.2s;
 }
 .tc-btn:hover {
-  background: #eac794;
-  border-color: #eac794;
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
 }
 
 /* ===== 4. PILLARS ===== */
