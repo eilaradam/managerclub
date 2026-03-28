@@ -30,6 +30,9 @@ function moveTestimonial(dir, id) {
   const trackId = id || 'top';
   const s = tcState[trackId];
   if (!s || s.animating) return;
+  // Recalcular largura do card (pode mudar com resize/mobile)
+  const firstCard = s.track.querySelector('.testimonial-card');
+  s.cardWidth = firstCard.offsetWidth + parseInt(getComputedStyle(firstCard).marginRight || 0);
   s.animating = true;
   s.index += dir;
   s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
