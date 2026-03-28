@@ -583,6 +583,19 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
+.bonus-lupa {
+  position: absolute;
+  left: -20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45%;
+  max-width: 500px;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+#bonus .container { position: relative; z-index: 1; }
+
 /* ===== 13. BONUS ===== */
 .bonus-cards-grid {
   display: grid;
