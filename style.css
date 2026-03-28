@@ -348,6 +348,7 @@ img { max-width: 100%; display: block; }
 .accordion-body li { padding: 10px 0; font-size: 0.95rem; opacity: 0.8; list-style: disc; line-height: 1.6; }
 .accordion-body p { padding: 0 0 16px; font-size: 0.95rem; opacity: 0.7; line-height: 1.6; }
 .cycle-desc { font-weight: 600; opacity: 0.9 !important; font-style: italic; }
+.accordion-header small { font-weight: 400; opacity: 0.5; font-size: 0.85em; margin-left: 8px; }
 
 /* ===== 11. GUESTS ===== */
 .guests-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 700px; margin: 0 auto; }
