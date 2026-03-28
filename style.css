@@ -289,8 +289,10 @@ img { max-width: 100%; display: block; }
 }
 .testimonial-card {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0;
   background: #ffffff;
   border: 2px solid #000000;
   border-radius: 20px;
@@ -298,6 +300,7 @@ img { max-width: 100%; display: block; }
   text-align: left;
   min-width: calc(50% - 12px);
   max-width: calc(50% - 12px);
+  min-height: 160px;
   flex-shrink: 0;
   margin-right: 24px;
   box-sizing: border-box;
