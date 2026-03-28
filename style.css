@@ -391,21 +391,17 @@ img { max-width: 100%; display: block; }
   text-align: center;
   margin-bottom: 40px;
 }
-.audience-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  max-width: 750px;
-  margin: 0 auto 40px;
-}
-.audience-card {
-  background: #FFF8F2;
-  border: 1px solid #E8E0D8;
-  border-radius: 12px;
-  padding: 20px 24px;
+.audience-lines {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+.audience-line {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   text-align: left;
 }
 .audience-check {
@@ -420,33 +416,16 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   font-size: 14px;
   font-weight: 700;
-  margin-top: 2px;
 }
-.audience-card p { font-size: 14px; color: #333; line-height: 1.5; margin: 0; }
+.audience-line p { font-size: 16px; color: #333; line-height: 1.4; margin: 0; }
 
-.audience-disclaimer-dark {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  background: #1B1B1B;
-  border-left: 4px solid #C8441A;
-  border-radius: 12px;
-  padding: 32px;
-  text-align: left;
+.audience-coral-statement {
+  font-size: 22px;
+  font-weight: 800;
+  color: #C8441A;
+  text-align: center;
+  margin-bottom: 16px;
 }
-.audience-disclaimer-dark p { font-size: 15px; color: #ffffff; line-height: 1.7; margin-bottom: 12px; }
-.audience-disclaimer-dark p:last-child { margin-bottom: 0; }
-.audience-highlight-dark { color: #C8441A !important; font-size: 16px !important; font-weight: 400 !important; }
-
-.not-for-you-dark {
-  max-width: 600px; margin: 0 auto 16px;
-  border: 1px solid #ddd; border-radius: 12px;
-  padding: 24px 32px; text-align: left;
-  margin-top: 32px;
-}
-.not-for-you-dark h3 { font-size: 14px; color: #666; margin-bottom: 12px; font-weight: 700; }
-.not-for-you-dark ul { padding-left: 0; }
-.not-for-you-dark li { list-style: none; font-size: 13px; color: #555; padding: 3px 0; line-height: 1.5; display: flex; align-items: center; gap: 10px; }
-.x-icon { color: #C8441A; font-weight: bold; font-size: 18px; flex-shrink: 0; }
 
 /* ===== 8. VIDEO ===== */
 .video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
@@ -588,7 +567,6 @@ img { max-width: 100%; display: block; }
   .bonus-value { width: 100%; text-align: right; }
   .video-grid { grid-template-columns: 1fr 1fr; max-width: 500px; margin: 0 auto; }
   .benefit-card { text-align: left; }
-  .audience-cards { grid-template-columns: 1fr; }
   .not-for-you { padding: 20px 24px; }
   .btn-cta-big { padding: 18px 40px; font-size: 1rem; }
 }
