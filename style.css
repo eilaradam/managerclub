@@ -62,11 +62,8 @@ img { max-width: 100%; display: block; }
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 60px;
-  max-width: 500px;
-  margin: 0 auto 0 0;
 }
 .hero-text { text-align: left; }
 .hero-logo { height: 250px; margin-bottom: 32px; }
