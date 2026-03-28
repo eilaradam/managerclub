@@ -56,13 +56,13 @@ img { max-width: 100%; display: block; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #ffffff url('assets/BACK-PAG-1.png') center center / 85% no-repeat;
   padding: 10px 0 60px;
   color: #000000;
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: 60px;
 }
