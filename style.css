@@ -556,6 +556,33 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
 }
 
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 60px;
+}
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.divider-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #eac794;
+  flex-shrink: 0;
+}
+
 /* ===== 13. BONUS ===== */
 .bonus-cards-grid {
   display: grid;
