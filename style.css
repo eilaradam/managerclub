@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== 2. HERO ===== */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   background:
