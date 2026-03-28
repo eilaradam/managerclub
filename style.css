@@ -728,8 +728,8 @@ img { max-width: 100%; display: block; }
 }
 .guarantee-seal { flex-shrink: 0; }
 .guarantee-seal-outer {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: #eac794;
   display: flex;
@@ -739,8 +739,8 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 0 8px rgba(234, 199, 148, 0.15);
 }
 .guarantee-seal-inner {
-  width: 130px;
-  height: 130px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   background: #1B1B1B;
   border: 3px solid #eac794;
@@ -750,21 +750,21 @@ img { max-width: 100%; display: block; }
 }
 .guarantee-seal-number {
   font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 900;
   color: rgba(234, 199, 148, 0.3);
 }
 .guarantee-text { flex: 1; text-align: left; }
 .guarantee-text h2 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.2;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.3;
   color: #000000;
 }
 .guarantee-text p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   color: #555;
   line-height: 1.7;
   margin-bottom: 12px;
