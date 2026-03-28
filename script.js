@@ -1,19 +1,45 @@
-// Testimonial carousel (loop infinito contínuo)
-const tcIndexes = { top: 0 };
+// Testimonial carousel (loop infinito real com clones)
+const tcState = {};
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tc-track').forEach(track => {
+    const cards = Array.from(track.children);
+    // Clonar todos os cards e adicionar no final pra loop seamless
+    cards.forEach(card => track.appendChild(card.cloneNode(true)));
+    const id = track.id.replace('tc-track-', '');
+    const total = cards.length;
+    const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight);
+    tcState[id] = { index: 0, total, cardWidth, track };
+  });
+});
 function moveTestimonial(dir, id) {
   const trackId = id || 'top';
-  const selector = '#tc-track-' + trackId;
-  const track = document.querySelector(selector);
-  if (!track) return;
-  const cards = track.querySelectorAll('.testimonial-card');
-  const total = cards.length;
-  tcIndexes[trackId] = (tcIndexes[trackId] || 0) + dir;
-  // Loop infinito: wrap around
-  if (tcIndexes[trackId] >= total) tcIndexes[trackId] = 0;
-  if (tcIndexes[trackId] < 0) tcIndexes[trackId] = total - 1;
-  const card = cards[0];
-  const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
-  track.style.transform = `translateX(-${tcIndexes[trackId] * cardWidth}px)`;
+  const s = tcState[trackId];
+  if (!s) return;
+  s.index += dir;
+  // Quando passa do fim dos originais, reseta sem animação
+  if (s.index >= s.total) {
+    s.track.style.transition = 'none';
+    s.index = 0;
+    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
+    // Forçar reflow e avançar com animação
+    s.track.offsetHeight;
+    s.index = 1;
+    s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
+    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
+    return;
+  }
+  if (s.index < 0) {
+    s.track.style.transition = 'none';
+    s.index = s.total - 1;
+    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
+    s.track.offsetHeight;
+    s.index = s.total - 2;
+    s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
+    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
+    return;
+  }
+  s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
+  s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
 }
 
 // Accordion
