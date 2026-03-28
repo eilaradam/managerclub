@@ -24,8 +24,8 @@ img { max-width: 100%; display: block; }
 /* ===== CTA BUTTON ===== */
 .btn-cta {
   display: inline-block;
-  background: #eac794;
-  color: #000000;
+  background: #C8441A;
+  color: #ffffff;
   font-weight: 800;
   font-size: 1rem;
   padding: 16px 48px;
@@ -38,10 +38,10 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 .btn-cta { animation: pulse-glow 2s ease-in-out infinite; }
-.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(234, 199, 148, 0.35); animation: none; }
+.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200, 68, 26, 0.35); animation: none; }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(234, 199, 148, 0); transform: scale(1); }
-  50% { box-shadow: 0 0 30px 12px rgba(234, 199, 148, 0.5); transform: scale(1.03); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 68, 26, 0); transform: scale(1); }
+  50% { box-shadow: 0 0 30px 12px rgba(200, 68, 26, 0.4); transform: scale(1.03); }
 }
 .btn-cta-big { font-size: 1.2rem; padding: 20px 64px; }
 
@@ -124,20 +124,23 @@ img { max-width: 100%; display: block; }
 .hero-float-card {
   background: #ffffff;
   border: 1px solid #E8E0D8;
-  border-radius: 12px;
-  padding: 14px 20px;
+  border-radius: 10px;
+  padding: 10px 16px;
   display: flex;
   align-items: baseline;
-  gap: 6px;
+  gap: 5px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
+.hfc-1 { margin-right: 0; }
+.hfc-2 { margin-right: 40px; }
+.hfc-3 { margin-right: 10px; }
 .hfc-number {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
   color: #C8441A;
 }
 .hfc-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: #666;
 }
