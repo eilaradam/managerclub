@@ -53,11 +53,11 @@ img { max-width: 100%; display: block; }
 
 /* ===== 2. HERO ===== */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   background: #ffffff url('assets/BACK-PAG-1.png') center center / 85% no-repeat;
-  padding: 0 0 60px;
+  padding: 80px 0;
   color: #000000;
 }
 .hero-grid {
