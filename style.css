@@ -102,7 +102,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-text { text-align: left; }
 .hero-photo { display: flex; align-items: center; justify-content: flex-start; overflow: visible; }
-.hero-photo img { width: 180%; max-width: none; object-fit: contain; border-radius: 0; margin-left: -30%; }
+.hero-photo img { width: 180%; max-width: none; object-fit: contain; border-radius: 0; margin-left: -5%; }
 .hero-badge {
   display: inline-block;
   font-size: 13px;
