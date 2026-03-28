@@ -586,8 +586,8 @@ img { max-width: 100%; display: block; }
 .bonus-lupa {
   position: absolute;
   left: -20%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30%;
+  transform: translateY(-50%) rotate(-15deg);
   width: 45%;
   max-width: 500px;
   opacity: 0.85;
