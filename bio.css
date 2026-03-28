@@ -2,162 +2,248 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #FFF8F2;
+  background: #ffffff;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
 }
 
 .bio-page {
-  max-width: 440px;
-  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
 }
 
-/* ===== HEADER ===== */
-.bio-header {
-  text-align: center;
-  margin-bottom: 32px;
+/* ===== LOGO ===== */
+.bio-logo {
+  margin-bottom: 24px;
 }
-.bio-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.bio-logo-img {
+  height: 36px;
+  width: auto;
+}
+
+/* ===== BANNER ===== */
+.bio-banner {
+  display: flex;
+  align-items: center;
+  background: #1B1B1B;
+  border-radius: 20px;
   overflow: hidden;
-  margin: 0 auto 16px;
-  border: 3px solid #eac794;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 48px;
+  transition: transform 0.2s;
 }
-.bio-avatar img {
+.bio-banner:hover { transform: translateY(-3px); }
+.bio-banner-text {
+  flex: 1;
+  padding: 28px 32px;
+}
+.bio-banner-badge {
+  display: inline-block;
+  background: #ae1405;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.bio-banner-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.bio-banner-text p {
+  font-size: 13px;
+  opacity: 0.6;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.bio-banner-cta {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #eac794;
+  letter-spacing: 0.5px;
+}
+.bio-banner-img {
+  width: 200px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.bio-banner-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.bio-name {
+
+/* ===== INTRO ===== */
+.bio-intro {
+  margin-bottom: 32px;
+}
+.bio-intro h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 8px;
+}
+.bio-intro p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* ===== GRID DE CARDS ===== */
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 48px;
+}
+.bio-card {
+  border-radius: 16px;
+  padding: 22px 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  transition: transform 0.2s;
+  position: relative;
+}
+.bio-card:hover { transform: translateY(-3px); }
+.bio-card-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+.bio-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.bio-card p {
+  font-size: 11px;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-top: auto;
+}
+
+/* Card dark */
+.bio-card--dark {
+  background: #1B1B1B;
+  color: #fff;
+}
+.bio-card--dark .bio-card-tag {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+/* Card gold */
+.bio-card--gold {
+  background: #eac794;
+  color: #000;
+}
+.bio-card--gold .bio-card-tag {
+  background: rgba(0,0,0,0.1);
+  color: #000;
+}
+
+/* Card coral */
+.bio-card--coral {
+  background: #ae1405;
+  color: #fff;
+}
+.bio-card--coral .bio-card-tag {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* Card light */
+.bio-card--light {
+  background: #F5F0EA;
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.bio-card--light .bio-card-tag {
+  background: rgba(0,0,0,0.06);
+  color: #555;
+}
+
+/* ===== YOUTUBE ===== */
+.bio-youtube {
+  margin-bottom: 48px;
+}
+.bio-youtube h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   font-weight: 800;
   color: #000;
-  margin-bottom: 4px;
+  margin-bottom: 16px;
 }
-.bio-tagline {
-  font-size: 13px;
-  color: #888;
-  line-height: 1.4;
-}
-
-/* ===== FEATURED CARD ===== */
-.bio-featured {
-  margin-bottom: 20px;
-}
-.bio-featured-card {
-  display: block;
-  background: #000;
+.bio-youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   border-radius: 16px;
   overflow: hidden;
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-  transition: transform 0.2s;
 }
-.bio-featured-card:hover {
-  transform: translateY(-2px);
-}
-.bio-featured-img {
+.bio-youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 180px;
-  background-size: cover;
-  background-position: center top;
-  opacity: 0.5;
+  height: 100%;
 }
-.bio-featured-content {
-  padding: 20px 24px;
-  position: relative;
+
+/* ===== BIO/ABOUT ===== */
+.bio-about {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #1B1B1B;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
-.bio-featured-badge {
-  display: inline-block;
-  background: #ae1405;
+.bio-about-img {
+  width: 220px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.bio-about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bio-about-text {
+  padding: 28px 28px 28px 0;
   color: #fff;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
 }
-.bio-featured-content h3 {
+.bio-about-text h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 800;
-  margin-bottom: 6px;
+  color: #eac794;
+  margin-bottom: 12px;
 }
-.bio-featured-content p {
+.bio-about-text p {
   font-size: 13px;
+  line-height: 1.6;
   opacity: 0.7;
-  line-height: 1.5;
-}
-
-/* ===== LINK CARDS ===== */
-.bio-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-.bio-link-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 14px;
-  padding: 16px 18px;
-  text-decoration: none;
-  color: #000;
-  transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.bio-link-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  border-color: #eac794;
-}
-.bio-link-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: #FFF8F2;
-  border: 1px solid rgba(0,0,0,0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: #C8441A;
-}
-.bio-link-text {
-  flex: 1;
-  min-width: 0;
-}
-.bio-link-text h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 2px;
-  color: #000;
-}
-.bio-link-text p {
-  font-size: 12px;
-  color: #999;
-  line-height: 1.4;
-}
-.bio-link-arrow {
-  color: #ccc;
-  font-size: 18px;
-  flex-shrink: 0;
-  transition: color 0.2s;
-}
-.bio-link-card:hover .bio-link-arrow {
-  color: #C8441A;
+  margin-bottom: 10px;
 }
 
 /* ===== SOCIALS ===== */
@@ -192,9 +278,19 @@ body {
   color: #bbb;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 480px) {
-  body { padding: 24px 16px; }
-  .bio-featured-img { height: 140px; }
-  .bio-featured-content h3 { font-size: 18px; }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .bio-page { padding: 24px 16px 40px; }
+  .bio-banner { flex-direction: column; }
+  .bio-banner-img { width: 100%; height: 180px; }
+  .bio-banner-text { padding: 24px; }
+  .bio-banner-text h2 { font-size: 20px; }
+  .bio-intro h2 { font-size: 22px; }
+  .bio-grid { grid-template-columns: 1fr 1fr; }
+  .bio-card { min-height: 160px; padding: 18px 16px; }
+  .bio-card h3 { font-size: 16px; }
+  .bio-about { flex-direction: column; }
+  .bio-about-img { width: 100%; height: 200px; }
+  .bio-about-text { padding: 24px; }
+  .bio-youtube h3 { font-size: 18px; }
 }
