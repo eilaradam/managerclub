@@ -653,15 +653,71 @@ img { max-width: 100%; display: block; }
 .price-installment-big { display: block; font-size: 1rem; opacity: 0.6; margin-top: 4px; }
 
 /* ===== 14. GUARANTEE ===== */
-.guarantee-container { max-width: 600px; }
-.guarantee-badge {
-  width: 80px; height: 80px; border-radius: 50%;
-  border: 3px solid #eac794; display: flex; align-items: center; justify-content: center;
-  font-size: 2.5rem; color: #eac794;
-  margin: 0 auto 24px;
+.guarantee-split {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.guarantee-points p { font-size: 1.05rem; padding: 8px 0; opacity: 0.8; line-height: 1.6; }
-.guarantee-trust { font-style: italic; opacity: 0.6 !important; margin-top: 8px; }
+.guarantee-seal { flex-shrink: 0; }
+.guarantee-seal-outer {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #eac794;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 0 8px rgba(234, 199, 148, 0.15);
+}
+.guarantee-seal-outer::before {
+  content: 'GARANTIA INCONDICIONAL • 7 DIAS • GARANTIA INCONDICIONAL • 7 DIAS •';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+}
+.guarantee-seal-inner {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #1B1B1B;
+  border: 3px solid #eac794;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guarantee-seal-number {
+  font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(234, 199, 148, 0.3);
+}
+.guarantee-text { flex: 1; text-align: left; }
+.guarantee-text h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.guarantee-text p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.guarantee-trust { font-style: italic; opacity: 0.5 !important; }
 
 /* ===== 15. BIO ===== */
 .bio-container { display: flex; gap: 48px; align-items: center; text-align: left; }
@@ -808,6 +864,11 @@ body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
   .price-split { flex-direction: column; padding: 48px 28px; gap: 40px; }
   .price-split-divider { width: 100%; height: 1px; }
   .price-split-big { font-size: 52px; }
+  .guarantee-split { flex-direction: column; text-align: center; gap: 32px; }
+  .guarantee-text { text-align: center; }
+  .guarantee-seal-outer { width: 140px; height: 140px; }
+  .guarantee-seal-inner { width: 100px; height: 100px; }
+  .guarantee-seal-number { font-size: 48px; }
   .video-grid { grid-template-columns: 1fr 1fr; max-width: 500px; margin: 0 auto; }
   .benefit-card { text-align: left; }
   .not-for-you { padding: 20px 24px; }
