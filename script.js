@@ -1,16 +1,18 @@
-// Testimonial carousel (loop infinito, 2 visíveis)
-let tcIndex = 0;
-function moveTestimonial(dir) {
-  const track = document.querySelector('.tc-track');
+// Testimonial carousel (loop infinito, 2 visíveis, múltiplos)
+const tcIndexes = { top: 0, bottom: 0 };
+function moveTestimonial(dir, id) {
+  const trackId = id || 'bottom';
+  const selector = trackId === 'top' ? '#tc-track-top' : '#tc-track-bottom';
+  const track = document.querySelector(selector) || document.querySelector('.tc-track');
   const cards = track.querySelectorAll('.testimonial-card');
   const total = cards.length;
   const maxIndex = total - 2;
-  tcIndex = tcIndex + dir;
-  if (tcIndex > maxIndex) tcIndex = 0;
-  if (tcIndex < 0) tcIndex = maxIndex;
+  tcIndexes[trackId] = (tcIndexes[trackId] || 0) + dir;
+  if (tcIndexes[trackId] > maxIndex) tcIndexes[trackId] = 0;
+  if (tcIndexes[trackId] < 0) tcIndexes[trackId] = maxIndex;
   const card = cards[0];
   const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
-  track.style.transform = `translateX(-${tcIndex * cardWidth}px)`;
+  track.style.transform = `translateX(-${tcIndexes[trackId] * cardWidth}px)`;
 }
 
 // Accordion

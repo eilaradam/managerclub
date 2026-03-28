@@ -84,6 +84,70 @@
           <p class="video-caption">Julia &mdash; O resultado veio antes de terminar o curso. Destravou e aumentou os clientes</p>
         </div>
       </div>
+      <div class="testimonials-carousel" style="margin-top: 48px;">
+        <button class="tc-btn tc-prev" onclick="moveTestimonial(-1, 'top')">&larr;</button>
+        <div class="tc-viewport">
+          <div class="tc-track" id="tc-track-top">
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-1.jpg" alt="Aluna 1" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Primeira marca fechada em 14 dias. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-2.jpg" alt="Aluna 2" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Saiu do zero e hoje gere 3 marcas. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-3.jpg" alt="Aluna 3" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Organizou a carreira inteira com o m&eacute;todo. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-4.jpg" alt="Aluna 4" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Fechou contrato recorrente no primeiro m&ecirc;s. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-5.jpg" alt="Aluna 5" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Largou o emprego e vive 100% de gest&atilde;o UGC. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-6.jpg" alt="Aluna 6" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Entendeu precifica&ccedil;&atilde;o e triplicou o ticket. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-7.jpg" alt="Aluna 7" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Campanha entregue sem estresse pela primeira vez. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-photo"><img src="assets/aluna-8.jpg" alt="Aluna 8" onerror="this.style.display='none'"></div>
+              <div class="testimonial-content">
+                <h3>Nome da Aluna</h3>
+                <p>Resultado que veio do b&aacute;sico bem feito. Depoimento da aluna sobre sua experi&ecirc;ncia no Manager Club.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="tc-btn tc-next" onclick="moveTestimonial(1, 'top')">&rarr;</button>
+      </div>
     </div>
   </section>
 
@@ -506,9 +570,9 @@
       <h2>Quem passou pelo Manager Club<br>j&aacute; sabe: <span class="highlight-dark">o processo funciona.</span></h2>
       <p class="section-sub">Resultados reais de alunas reais. Sem filtro, sem promessa &mdash; s&oacute; execu&ccedil;&atilde;o.</p>
       <div class="testimonials-carousel">
-        <button class="tc-btn tc-prev" onclick="moveTestimonial(-1)">&larr;</button>
+        <button class="tc-btn tc-prev" onclick="moveTestimonial(-1, 'bottom')">&larr;</button>
         <div class="tc-viewport">
-          <div class="tc-track">
+          <div class="tc-track" id="tc-track-bottom">
             <div class="testimonial-card">
               <div class="testimonial-photo"><img src="assets/aluna-1.jpg" alt="Aluna 1" onerror="this.style.display='none'"></div>
               <div class="testimonial-content">
@@ -567,7 +631,7 @@
             </div>
           </div>
         </div>
-        <button class="tc-btn tc-next" onclick="moveTestimonial(1)">&rarr;</button>
+        <button class="tc-btn tc-next" onclick="moveTestimonial(1, 'bottom')">&rarr;</button>
       </div>
     </div>
   </section>
