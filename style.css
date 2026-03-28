@@ -237,7 +237,7 @@ img { max-width: 100%; display: block; }
 }
 .marquee-ribbon--back {
   top: 10px;
-  background: #1a1a1a;
+  background: #e8d5b8;
   transform: rotate(-2deg);
   z-index: 0;
 }
@@ -248,10 +248,10 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 .marquee-ribbon--back .marquee-track span {
-  color: rgba(234, 199, 148, 0.4);
+  color: rgba(0, 0, 0, 0.25);
 }
 .marquee-ribbon--back .marquee-track span::after {
-  color: rgba(234, 199, 148, 0.25);
+  color: rgba(0, 0, 0, 0.15);
 }
 .marquee-ribbon--front .marquee-track span {
   color: #000000;
