@@ -1,9 +1,10 @@
 // Testimonial carousel (loop infinito, 2 visíveis, múltiplos)
-const tcIndexes = { top: 0, bottom: 0 };
+const tcIndexes = { top: 0 };
 function moveTestimonial(dir, id) {
-  const trackId = id || 'bottom';
-  const selector = trackId === 'top' ? '#tc-track-top' : '#tc-track-bottom';
-  const track = document.querySelector(selector) || document.querySelector('.tc-track');
+  const trackId = id || 'top';
+  const selector = '#tc-track-' + trackId;
+  const track = document.querySelector(selector);
+  if (!track) return;
   const cards = track.querySelectorAll('.testimonial-card');
   const total = cards.length;
   const maxIndex = total - 2;

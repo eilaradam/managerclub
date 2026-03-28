@@ -477,11 +477,11 @@ img { max-width: 100%; display: block; }
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #444;
+  color: rgba(255, 255, 255, 0.75);
   padding: 10px 16px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 /* ===== 8. VIDEO ===== */
@@ -594,6 +594,47 @@ img { max-width: 100%; display: block; }
   margin-top: 16px; font-style: italic;
 }
 
+/* ===== PRICE CARD ===== */
+.price-card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 40px 36px;
+  text-align: left;
+}
+.price-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.price-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.price-includes li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+.price-bonus-total {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+.price-card .price-box { text-align: center; }
+.price-card .btn-cta { display: block; text-align: center; width: 100%; margin-top: 16px; }
+.price-card .cta-sub { text-align: center; }
+
 /* ===== FINAL CTA ===== */
 .section-cta {
   background: #000000;
@@ -609,6 +650,8 @@ img { max-width: 100%; display: block; }
 .footer-links a { font-size: 0.85rem; opacity: 0.5; transition: opacity 0.2s; }
 .footer-links a:hover { opacity: 1; }
 .footer p { font-size: 0.8rem; opacity: 0.3; }
+html, body { height: auto; min-height: 100%; }
+body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
