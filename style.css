@@ -57,7 +57,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   background: #ffffff url('assets/BACK-PAG-1.png') center center / 85% no-repeat;
-  padding: 10px 0 60px;
+  padding: 0 0 60px;
   color: #000000;
 }
 .hero-grid {
@@ -65,6 +65,8 @@ img { max-width: 100%; display: block; }
   grid-template-columns: 1fr;
   align-items: center;
   gap: 60px;
+  max-width: 600px;
+  margin: 0;
 }
 .hero-text { text-align: left; }
 .hero-logo { height: 250px; margin-bottom: 32px; }
