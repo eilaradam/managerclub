@@ -19,6 +19,7 @@ img { max-width: 100%; display: block; }
 .section-light { background: #ffffff; color: #000000; }
 .section-dark { background: #000000; color: #ffffff; }
 .section-warm { background: #FFF8F2; color: #000000; }
+.section-gold { background: #eac794; color: #000000; }
 .section h2 { font-size: 38px; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
 .section-sub { font-size: 16px; opacity: 0.8; margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
@@ -290,8 +291,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 20px;
-  background: #FFF8F2;
-  border: 2px solid #eac794;
+  background: #ffffff;
+  border: 2px solid #000000;
   border-radius: 20px;
   padding: 28px 32px;
   text-align: left;
