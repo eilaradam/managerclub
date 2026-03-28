@@ -71,6 +71,18 @@ img { max-width: 100%; display: block; }
   padding: 80px 0;
   color: #000000;
 }
+.hero .hero-bg-blur {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: url('assets/fotoparacapa.png') center center / cover no-repeat;
+  filter: blur(80px);
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+}
 .hero::after {
   content: '';
   position: absolute;
