@@ -386,10 +386,11 @@ img { max-width: 100%; display: block; }
 .not-for-you-dark {
   max-width: 600px; margin: 0 auto 16px;
   border: 1px solid #333; border-radius: 12px;
-  padding: 20px 28px; text-align: center;
+  padding: 24px 32px; text-align: left;
 }
-.not-for-you-dark h3 { font-size: 14px; color: #666; margin-bottom: 8px; font-weight: 700; }
-.not-for-you-dark p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; }
+.not-for-you-dark h3 { font-size: 14px; color: #666; margin-bottom: 12px; font-weight: 700; }
+.not-for-you-dark ul { padding-left: 20px; }
+.not-for-you-dark li { list-style: disc; font-size: 13px; color: #555; padding: 3px 0; line-height: 1.5; }
 
 /* ===== 8. VIDEO ===== */
 .video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
