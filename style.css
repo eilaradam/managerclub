@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   background:
     url('assets/BACK-PAG-1.png') center center / 85% no-repeat,
-    #ffffff;
+    #FFF8F2;
   position: relative;
   padding: 80px 0;
   color: #000000;
@@ -75,7 +75,7 @@ img { max-width: 100%; display: block; }
   left: 0;
   right: 0;
   height: 40%;
-  background: linear-gradient(to bottom, transparent, #ffffff);
+  background: linear-gradient(to bottom, transparent, #FFF8F2);
   z-index: 0;
   pointer-events: none;
 }
@@ -98,20 +98,46 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 .hero-text { text-align: left; }
-.hero-brand {
+.hero-badge {
   display: inline-block;
-  font-size: 52px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #000000;
-  margin-bottom: 32px;
-  background: #eac794;
-  padding: 8px 24px;
-  border-radius: 4px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  background: #C8441A;
+  padding: 6px 16px;
+  border-radius: 20px;
 }
-.hero-brand strong {
+/* hero float cards */
+.hero-cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hero-float-card {
+  background: #ffffff;
+  border: 1px solid #E8E0D8;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.hfc-number {
+  font-size: 22px;
   font-weight: 800;
+  color: #C8441A;
+}
+.hfc-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
 }
 .hero-title {
   font-family: 'Montserrat', sans-serif;
@@ -180,9 +206,11 @@ img { max-width: 100%; display: block; }
   padding: 0 24px;
 }
 .marquee-track span::after {
-  content: "  |";
+  content: "·";
   margin-left: 24px;
-  opacity: 0.4;
+  color: #C8441A;
+  opacity: 1;
+  font-weight: 700;
 }
 @keyframes marquee {
   0% { transform: translateX(-50%); }
@@ -567,6 +595,9 @@ img { max-width: 100%; display: block; }
   .hero-logo { margin: 0 auto 24px; }
   .hero-desc { margin: 0 auto 32px; }
   .hero-photo img { max-height: 400px; margin: 0 auto; width: 80%; }
+  .hero-cards { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 24px; }
+  .hero-float-card { padding: 10px 14px; }
+  .hfc-number { font-size: 18px; }
   .video-grid { grid-template-columns: 1fr 1fr; max-width: 400px; margin: 0 auto; }
   .pillar-row { flex-direction: column; gap: 8px; }
   .pillar-row h3 { width: auto; }
