@@ -225,7 +225,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   height: 100px;
   overflow: hidden;
-  background: transparent;
+  background: #FFF8F2;
 }
 .marquee-ribbon {
   position: absolute;
