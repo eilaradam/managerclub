@@ -118,6 +118,8 @@ img { max-width: 100%; display: block; }
   gap: 16px;
   align-items: flex-end;
   justify-content: center;
+  padding-right: 0;
+  margin-left: auto;
 }
 .hero-float-card {
   background: #ffffff;
