@@ -3,41 +3,35 @@ const tcState = {};
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tc-track').forEach(track => {
     const cards = Array.from(track.children);
-    // Clonar todos os cards e adicionar no final pra loop seamless
     cards.forEach(card => track.appendChild(card.cloneNode(true)));
     const id = track.id.replace('tc-track-', '');
     const total = cards.length;
     const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight);
-    tcState[id] = { index: 0, total, cardWidth, track };
+    tcState[id] = { index: 0, total, cardWidth, track, animating: false };
+    // Ao terminar animação, reseta silenciosamente se passou dos originais
+    track.addEventListener('transitionend', () => {
+      const s = tcState[id];
+      s.animating = false;
+      if (s.index >= s.total) {
+        s.track.style.transition = 'none';
+        s.index = s.index - s.total;
+        s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
+        s.track.offsetHeight;
+      } else if (s.index < 0) {
+        s.track.style.transition = 'none';
+        s.index = s.index + s.total;
+        s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
+        s.track.offsetHeight;
+      }
+    });
   });
 });
 function moveTestimonial(dir, id) {
   const trackId = id || 'top';
   const s = tcState[trackId];
-  if (!s) return;
+  if (!s || s.animating) return;
+  s.animating = true;
   s.index += dir;
-  // Quando passa do fim dos originais, reseta sem animação
-  if (s.index >= s.total) {
-    s.track.style.transition = 'none';
-    s.index = 0;
-    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
-    // Forçar reflow e avançar com animação
-    s.track.offsetHeight;
-    s.index = 1;
-    s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
-    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
-    return;
-  }
-  if (s.index < 0) {
-    s.track.style.transition = 'none';
-    s.index = s.total - 1;
-    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
-    s.track.offsetHeight;
-    s.index = s.total - 2;
-    s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
-    s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
-    return;
-  }
   s.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
   s.track.style.transform = `translateX(-${s.index * s.cardWidth}px)`;
 }
