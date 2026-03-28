@@ -837,25 +837,34 @@ img { max-width: 100%; display: block; }
 }
 .price-split-bonus s { color: rgba(0, 0, 0, 0.4); }
 .price-split-from {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
 }
-.price-split-from s { color: rgba(0, 0, 0, 0.5); }
+.price-split-from s {
+  color: #999;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: line-through;
+}
 .price-split-big {
   font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
-  font-size: 72px;
-  font-weight: 800;
-  color: #000000;
+  font-size: 80px;
+  font-weight: 900;
+  color: #ae1405;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .price-split-installment {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 24px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 28px;
+  background: rgba(0,0,0,0.04);
+  padding: 8px 20px;
+  border-radius: 20px;
 }
 .price-split-right .btn-cta {
   display: inline-block;
