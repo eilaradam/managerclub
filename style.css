@@ -857,6 +857,11 @@ img { max-width: 100%; display: block; }
   line-height: 1;
   margin-bottom: 4px;
 }
+.price-cents {
+  font-size: 32px;
+  font-weight: 700;
+  vertical-align: super;
+}
 .price-split-installment {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
