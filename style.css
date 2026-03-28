@@ -223,7 +223,7 @@ img { max-width: 100%; display: block; }
 /* ===== MARQUEE RIBBON ===== */
 .marquee-ribbon-wrapper {
   position: relative;
-  height: 100px;
+  height: 120px;
   overflow: hidden;
   background: #FFF8F2;
 }
@@ -236,14 +236,14 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 .marquee-ribbon--back {
-  top: 10px;
+  top: 20px;
   background: #e8d5b8;
   transform: rotate(-2deg);
   z-index: 0;
 }
 .marquee-ribbon--front {
-  top: 28px;
-  background: #eac794;
+  top: 38px;
+  background: #000000;
   transform: rotate(1.5deg);
   z-index: 1;
 }
@@ -254,7 +254,7 @@ img { max-width: 100%; display: block; }
   color: rgba(0, 0, 0, 0.15);
 }
 .marquee-ribbon--front .marquee-track span {
-  color: #000000;
+  color: #eac794;
   font-weight: 700;
 }
 .marquee-ribbon--front .marquee-track span::after {
