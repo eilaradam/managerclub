@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== 2. HERO ===== */
 .hero {
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background:
@@ -96,6 +96,7 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;
+  position: relative;
 }
 .hero-text { text-align: left; }
 .hero-badge {
@@ -112,16 +113,15 @@ img { max-width: 100%; display: block; }
 }
 /* hero float cards */
 .hero-cards {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: flex-end;
-  justify-content: center;
-  padding-right: 0;
-  margin-left: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
 }
 .hero-float-card {
+  position: absolute;
+  right: 0;
   background: #ffffff;
   border: 1px solid #E8E0D8;
   border-radius: 10px;
@@ -131,9 +131,9 @@ img { max-width: 100%; display: block; }
   gap: 5px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
-.hfc-1 { margin-right: 0; }
-.hfc-2 { margin-right: 40px; }
-.hfc-3 { margin-right: 10px; }
+.hfc-1 { top: 15%; right: 0; }
+.hfc-2 { top: 28%; right: 40px; }
+.hfc-3 { top: 41%; right: 10px; }
 .hfc-number {
   font-size: 18px;
   font-weight: 800;
@@ -578,7 +578,8 @@ img { max-width: 100%; display: block; }
   .hero-logo { margin: 0 auto 24px; }
   .hero-desc { margin: 0 auto 32px; }
   .hero-photo img { max-height: 400px; margin: 0 auto; width: 80%; }
-  .hero-cards { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 24px; }
+  .hero-cards { position: static; width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+  .hero-float-card { position: static; }
   .hero-float-card { padding: 10px 14px; }
   .hfc-number { font-size: 18px; }
   .video-grid { grid-template-columns: 1fr 1fr; max-width: 400px; margin: 0 auto; }
