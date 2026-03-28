@@ -591,11 +591,13 @@ img { max-width: 100%; display: block; }
   margin-bottom: 48px;
 }
 .bonus-card {
-  background: #ffffff;
+  background: #FFF8F2;
   border: 2px solid #000000;
   border-radius: 16px;
-  padding: 28px 24px;
+  padding: 40px 24px 28px;
   text-align: center;
+  position: relative;
+  margin-top: 28px;
 }
 .bonus-card-icon {
   width: 48px;
@@ -607,7 +609,10 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .bonus-card h3 {
   font-family: 'Montserrat', sans-serif;
