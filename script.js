@@ -1,4 +1,4 @@
-// Testimonial carousel (loop infinito, 2 visíveis, múltiplos)
+// Testimonial carousel (loop infinito contínuo)
 const tcIndexes = { top: 0 };
 function moveTestimonial(dir, id) {
   const trackId = id || 'top';
@@ -7,10 +7,10 @@ function moveTestimonial(dir, id) {
   if (!track) return;
   const cards = track.querySelectorAll('.testimonial-card');
   const total = cards.length;
-  const maxIndex = total - 2;
   tcIndexes[trackId] = (tcIndexes[trackId] || 0) + dir;
-  if (tcIndexes[trackId] > maxIndex) tcIndexes[trackId] = 0;
-  if (tcIndexes[trackId] < 0) tcIndexes[trackId] = maxIndex;
+  // Loop infinito: wrap around
+  if (tcIndexes[trackId] >= total) tcIndexes[trackId] = 0;
+  if (tcIndexes[trackId] < 0) tcIndexes[trackId] = total - 1;
   const card = cards[0];
   const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight);
   track.style.transform = `translateX(-${tcIndexes[trackId] * cardWidth}px)`;
