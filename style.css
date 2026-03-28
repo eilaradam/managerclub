@@ -942,43 +942,101 @@ body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .section { padding: 60px 0; }
-  .audience-columns { grid-template-columns: 1fr; }
-  .ia-wrapper { flex-direction: column; }
-  .bio-container { flex-direction: column; text-align: center; }
+  .container { padding: 0 20px; }
+  .section { padding: 48px 0; }
+  .section h2 { font-size: 28px; }
+  .section-sub { font-size: 14px; margin-bottom: 32px; }
+
+  /* Hero */
+  .hero { padding: 60px 0 40px; }
+  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+  .hero-text { text-align: center; }
+  .hero-title { font-size: 26px; }
+  .hero-desc { margin: 0 auto 24px; font-size: 0.95rem; }
+  .hero-photo { order: -1; }
+  .hero-photo img { width: 100%; max-width: none; margin-left: 0; max-height: 350px; border-radius: 16px; }
+  .hero-cards { position: static; width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
+  .hero-float-card { position: static; padding: 8px 14px; }
+  .hfc-number { font-size: 16px; }
+  .hero-micro { font-size: 0.7rem; }
+  .btn-cta { padding: 14px 32px; font-size: 0.9rem; }
+  .btn-cta-big { padding: 16px 32px; font-size: 0.95rem; }
+
+  /* Marquee */
+  .marquee-ribbon-wrapper { height: 90px; }
+  .marquee-ribbon { padding: 10px 0; }
+
+  /* Videos */
+  .video-grid { grid-template-columns: 1fr 1fr; max-width: 100%; gap: 12px; }
+  .video-caption { font-size: 0.75rem; }
+
+  /* Testimonials carousel */
+  .testimonials-carousel { gap: 8px; }
+  .testimonial-card { min-width: calc(85vw - 80px); max-width: calc(85vw - 80px); padding: 24px; min-height: 150px; margin-right: 12px; }
+  .testimonial-card::before { font-size: 48px; top: 8px; right: 20px; }
+  .tc-btn { width: 36px; height: 36px; font-size: 0.9rem; }
+
+  /* Audience */
+  .audience-columns { grid-template-columns: 1fr; gap: 16px; }
+  .audience-col-header { font-size: 11px; padding: 8px 14px; }
+
+  /* Bio */
+  .bio-container { flex-direction: column; text-align: center; gap: 32px; }
   .bio-image { flex: none; width: 200px; margin: 0 auto; }
   .bio-photo { min-height: 250px; }
   .bio-text { text-align: center; }
-  .guests-grid { grid-template-columns: 1fr; max-width: 200px; margin: 0 auto; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .bonus-cards-grid { grid-template-columns: 1fr 1fr; }
-  .price-split-cols { flex-direction: column; padding: 40px 28px; gap: 40px; }
+  .bio-text p { font-size: 0.9rem; }
+  .bio-quote { font-size: 1rem; }
+
+  /* Accordion */
+  .accordion-header { font-size: 14px; padding: 16px; }
+  .accordion-body { padding: 0 16px 16px; }
+
+  /* Bonus cards */
+  .bonus-cards-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .bonus-card { padding: 32px 16px 20px; }
+  .bonus-card h3 { font-size: 12px; }
+  .bonus-card p { font-size: 12px; }
+  .bonus-card-icon { width: 40px; height: 40px; top: -20px; }
+  .bonus-lupa { display: none; }
+
+  /* Dividers */
+  .section-divider { padding: 0 32px; }
+  .section-divider--subtle { padding: 0 48px; }
+
+  /* Price split */
+  .price-split-cols { flex-direction: column; padding: 32px 24px; gap: 32px; }
   .price-split-divider { width: 100%; height: 1px; }
   .price-split-big { font-size: 52px; }
-  .guarantee-split { flex-direction: column; text-align: center; gap: 32px; }
+  .price-cents { font-size: 24px; }
+  .price-split-from { font-size: 16px; }
+  .price-split-from s { font-size: 20px; }
+  .price-trust-badges { flex-direction: column; gap: 16px; }
+  .price-trust-sep { width: 40px; height: 1px; }
+  .price-split-right .btn-cta { padding: 16px 32px; font-size: 0.95rem; }
+
+  /* Guarantee */
+  .guarantee-split { flex-direction: column; text-align: center; gap: 28px; }
   .guarantee-text { text-align: center; }
-  .guarantee-seal-outer { width: 140px; height: 140px; }
-  .guarantee-seal-inner { width: 100px; height: 100px; }
-  .guarantee-seal-number { font-size: 48px; }
-  .video-grid { grid-template-columns: 1fr 1fr; max-width: 500px; margin: 0 auto; }
-  .benefit-card { text-align: left; }
-  .not-for-you { padding: 20px 24px; }
-  .btn-cta-big { padding: 18px 40px; font-size: 1rem; }
+  .guarantee-text h2 { font-size: 26px; }
+  .guarantee-seal-outer { width: 130px; height: 130px; }
+  .guarantee-seal-inner { width: 90px; height: 90px; }
+  .guarantee-seal-number { font-size: 44px; }
+
+  /* Footer */
+  .footer-links { gap: 16px; }
+  .top-bar { font-size: 0.75rem; letter-spacing: 0; padding: 8px 12px; }
 }
+
 @media (max-width: 480px) {
-  .hero-title { font-size: 24px; }
-  .section h2 { font-size: 28px; }
-  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-  .hero-text { text-align: center; }
-  .hero-logo { margin: 0 auto 24px; }
-  .hero-desc { margin: 0 auto 32px; }
-  .hero-photo img { max-height: 400px; margin: 0 auto; width: 80%; }
-  .hero-cards { position: static; width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
-  .hero-float-card { position: static; }
-  .hero-float-card { padding: 10px 14px; }
-  .hfc-number { font-size: 18px; }
-  .video-grid { grid-template-columns: 1fr 1fr; max-width: 400px; margin: 0 auto; }
+  .hero-title { font-size: 22px; }
+  .section h2 { font-size: 24px; }
+  .video-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+  .bonus-cards-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+  .testimonial-card { min-width: calc(90vw - 60px); max-width: calc(90vw - 60px); }
+  .price-split-big { font-size: 44px; }
+  .price-cents { font-size: 20px; }
   .pillar-row { flex-direction: column; gap: 8px; }
   .pillar-row h3 { width: auto; }
-  .top-bar { font-size: 0.75rem; letter-spacing: 0; }
+  .audience-col-list li { font-size: 13px; padding: 8px 12px; }
 }
