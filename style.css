@@ -675,54 +675,76 @@ img { max-width: 100%; display: block; }
   margin-top: 16px; font-style: italic;
 }
 
-/* ===== PRICE CARD ===== */
-.price-card {
-  max-width: 560px;
+/* ===== PRICE CARD V2 ===== */
+.price-card-v2 {
+  max-width: 520px;
   margin: 0 auto;
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 16px;
-  padding: 40px 36px;
-  text-align: left;
-}
-.price-card-title {
-  font-size: 18px;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 48px 40px;
   text-align: center;
+  box-shadow: 8px 8px 0 #eac794;
+  border: 2px solid #000000;
 }
-.price-includes {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.price-card-v2-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 8px;
 }
-.price-includes li {
+.price-card-v2-sub {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.5;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
 }
-.price-bonus-total {
+.price-card-v2-divider {
+  width: 60px;
+  height: 2px;
+  background: #eac794;
+  margin: 0 auto 28px;
+}
+.price-card-v2-from {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+.price-card-v2-from s {
+  color: #999;
+  font-weight: 400;
+}
+.price-card-v2-installment {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: #ae1405;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.price-card-v2-cash {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 32px;
+}
+.price-card-v2 .btn-cta {
+  display: block;
+  width: 100%;
   text-align: center;
-  font-size: 14px;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 16px;
+  margin-top: 0;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 1rem;
 }
-.price-card .price-box { text-align: center; }
-.price-card .btn-cta { display: block; text-align: center; width: 100%; margin-top: 16px; }
-.price-card .cta-sub { text-align: center; }
-
-/* ===== FINAL CTA ===== */
-.section-cta {
-  background: #000000;
-  padding: 100px 0;
+.price-card-v2-secure {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 16px;
 }
-.final-price { margin-bottom: 0; }
-.cta-sub { font-size: 0.85rem; opacity: 0.5; margin-top: 16px; }
 
 /* ===== 17. FOOTER ===== */
 .footer { background: #000000; border-top: 1px solid #222; padding: 32px 0; text-align: center; }
