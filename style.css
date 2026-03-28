@@ -733,7 +733,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== PRICE SPLIT ===== */
 .price-split {
-  background: #1B1B1B;
+  background: #eac794;
   padding: 80px 120px;
   max-width: 1100px;
   margin: 0 auto;
@@ -747,7 +747,7 @@ img { max-width: 100%; display: block; }
   font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 24px;
 }
 .price-split-list {
@@ -761,7 +761,7 @@ img { max-width: 100%; display: block; }
 .price-split-list li {
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
-  color: #ffffff;
+  color: #000000;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -774,7 +774,7 @@ img { max-width: 100%; display: block; }
 .price-split-divider {
   width: 1px;
   align-self: stretch;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
 }
 .price-split-right {
@@ -788,35 +788,35 @@ img { max-width: 100%; display: block; }
 .price-split-carrying {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 4px;
 }
 .price-split-bonus {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
   margin-bottom: 16px;
 }
-.price-split-bonus s { color: rgba(255, 255, 255, 0.4); }
+.price-split-bonus s { color: rgba(0, 0, 0, 0.4); }
 .price-split-from {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 8px;
 }
-.price-split-from s { color: rgba(255, 255, 255, 0.5); }
+.price-split-from s { color: rgba(0, 0, 0, 0.5); }
 .price-split-big {
   font-family: 'Be Vietnam Pro', 'Montserrat', sans-serif;
   font-size: 72px;
   font-weight: 800;
-  color: #ffffff;
+  color: #000000;
   line-height: 1;
   margin-bottom: 8px;
 }
 .price-split-installment {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 24px;
 }
 .price-split-right .btn-cta {
@@ -835,7 +835,7 @@ img { max-width: 100%; display: block; }
 .price-split-secure {
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.35);
   margin-top: 12px;
 }
 
