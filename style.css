@@ -1005,7 +1005,8 @@ body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
 
   /* Testimonials carousel */
   .testimonials-carousel { gap: 8px; }
-  .testimonial-card { min-width: calc(100vw - 120px); max-width: calc(100vw - 120px); padding: 24px; min-height: auto; margin-right: 12px; }
+  .testimonial-card { min-width: 100%; max-width: 100%; padding: 24px; min-height: auto; margin-right: 0; box-sizing: border-box; }
+  .tc-track { gap: 0; }
   .testimonial-card::before { font-size: 48px; top: 8px; right: 20px; }
   .tc-btn { width: 36px; height: 36px; font-size: 0.9rem; }
 
@@ -1069,7 +1070,6 @@ body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
   .section h2 { font-size: 24px; }
   .video-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
   .bonus-cards-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
-  .testimonial-card { min-width: calc(100vw - 110px); max-width: calc(100vw - 110px); }
   .price-split-big { font-size: 44px; }
   .price-cents { font-size: 20px; }
   .pillar-row { flex-direction: column; gap: 8px; }
