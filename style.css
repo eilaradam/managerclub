@@ -67,12 +67,16 @@ img { max-width: 100%; display: block; }
 }
 .hero-text { text-align: left; }
 .hero-brand {
+  display: inline-block;
   font-size: 52px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #000000;
   margin-bottom: 32px;
+  background: #eac794;
+  padding: 8px 24px;
+  border-radius: 4px;
 }
 .hero-brand strong {
   font-weight: 800;
