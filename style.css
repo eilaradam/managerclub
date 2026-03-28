@@ -39,8 +39,8 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 .btn-cta { animation: pulse-glow 2s ease-in-out infinite; }
-.btn-cta-coral { background: #C8441A; color: #ffffff; }
-.btn-cta-coral:hover { box-shadow: 0 8px 32px rgba(200, 68, 26, 0.35); }
+.btn-cta-coral { background: #ae1405; color: #ffffff; }
+.btn-cta-coral:hover { box-shadow: 0 8px 32px rgba(174, 20, 5, 0.35); }
 .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(234, 199, 148, 0.35); animation: none; }
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(234, 199, 148, 0); transform: scale(1); }
