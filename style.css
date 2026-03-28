@@ -381,11 +381,11 @@ img { max-width: 100%; display: block; }
 .benefit-card:hover { border-color: #eac794; }
 .benefit-icon { font-size: 2rem; margin-bottom: 12px; }
 .benefit-icon-box {
-  width: 48px; height: 48px; background: #C8441A;
+  width: 48px; height: 48px; background: #eac794;
   border-radius: 10px; display: flex; align-items: center;
   justify-content: center; margin-bottom: 12px;
 }
-.benefit-card--highlight { border-color: #C8441A; }
+.benefit-card--highlight { border-color: #eac794; }
 .benefit-card h3 { font-size: 16px; margin-bottom: 8px; }
 .benefit-card p { font-size: 0.9rem; opacity: 0.7; line-height: 1.6; }
 
