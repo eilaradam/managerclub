@@ -1034,7 +1034,6 @@ body > *:last-child { margin-bottom: 0; padding-bottom: 0; }
 
   /* Accordion */
   .accordion-header { font-size: 14px; padding: 16px; }
-  .accordion-body { padding: 0 16px 16px; }
 
   /* Bonus cards */
   .bonus-cards-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
