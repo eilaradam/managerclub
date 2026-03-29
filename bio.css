@@ -43,7 +43,7 @@ body {
 .bio-banner-slide {
   width: 50%;
   flex-shrink: 0;
-  height: 300px;
+  height: 320px;
 }
 .bio-banner-slide img {
   width: 100%;
