@@ -153,10 +153,29 @@ body {
   background: #F5F0EA;
   color: #000;
   border: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
 }
 .bio-card--light .bio-card-tag {
   background: rgba(0,0,0,0.06);
   color: #555;
+}
+/* Faixa GRATUITO diagonal */
+.bio-card-ribbon {
+  position: absolute;
+  top: 18px;
+  right: -32px;
+  background: #ae1405;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 /* ===== YOUTUBE ===== */
