@@ -30,9 +30,6 @@ body {
   overflow: hidden;
   border-radius: 20px;
   position: relative;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  border-radius: 0;
 }
 .bio-banner-track {
   display: flex;
@@ -47,6 +44,25 @@ body {
   height: auto;
   display: block;
 }
+.bio-banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.bio-banner-arrow:hover { background: #fff; }
+.bio-banner-prev { left: 12px; }
+.bio-banner-next { right: 12px; }
 .bio-banner-dots {
   display: flex;
   justify-content: center;
