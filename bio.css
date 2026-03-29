@@ -181,7 +181,7 @@ body {
   gap: 16px;
   flex: 1;
 }
-.bio-card-row h3 { margin-bottom: 4px; }
+.bio-card-row h3 { margin-bottom: 4px; font-size: 22px; }
 .bio-card-row p { margin-top: 0; }
 .bio-card-icon-circle {
   width: 48px;
