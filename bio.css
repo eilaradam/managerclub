@@ -30,6 +30,9 @@ body {
   overflow: hidden;
   border-radius: 20px;
   position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border-radius: 0;
 }
 .bio-banner-track {
   display: flex;
