@@ -18,14 +18,20 @@
       <span class="bio-logo-text">lara.dam</span>
     </div>
 
-    <!-- Banners destaque -->
-    <div class="bio-banners">
-      <a href="#" class="bio-banner">
-        <img src="assets/banner1.png" alt="Banner 1" class="bio-banner-art">
-      </a>
-      <a href="#" class="bio-banner">
-        <img src="assets/banner2.png" alt="Banner 2" class="bio-banner-art">
-      </a>
+    <!-- Banner carousel -->
+    <div class="bio-banner-carousel">
+      <div class="bio-banner-track" id="bio-banner-track">
+        <a href="#" class="bio-banner-slide">
+          <img src="assets/banner1.png" alt="Banner 1">
+        </a>
+        <a href="#" class="bio-banner-slide">
+          <img src="assets/banner2.png" alt="Banner 2">
+        </a>
+      </div>
+      <div class="bio-banner-dots">
+        <span class="bio-banner-dot active" onclick="goToBanner(0)"></span>
+        <span class="bio-banner-dot" onclick="goToBanner(1)"></span>
+      </div>
     </div>
 
     <!-- Intro -->
@@ -127,5 +133,21 @@
     <p class="bio-footer">&copy; 2026 Lara Dam. Todos os direitos reservados.</p>
   </div>
 
+<script>
+let currentBanner = 0;
+const totalBanners = 2;
+function goToBanner(i) {
+  currentBanner = i;
+  const track = document.getElementById('bio-banner-track');
+  track.style.transform = 'translateX(-' + (i * 100) + '%)';
+  document.querySelectorAll('.bio-banner-dot').forEach((d, idx) => {
+    d.classList.toggle('active', idx === i);
+  });
+}
+// Auto-rotate a cada 4 segundos
+setInterval(() => {
+  goToBanner((currentBanner + 1) % totalBanners);
+}, 4000);
+</script>
 </body>
 </html>

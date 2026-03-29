@@ -24,26 +24,48 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* ===== BANNERS ===== */
-.bio-banners {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+/* ===== BANNER CAROUSEL ===== */
+.bio-banner-carousel {
   margin-bottom: 48px;
-}
-.bio-banner {
-  display: block;
-  border-radius: 20px;
   overflow: hidden;
-  text-decoration: none;
-  transition: transform 0.2s;
+  border-radius: 20px;
+  position: relative;
 }
-.bio-banner:hover { transform: translateY(-3px); }
-.bio-banner-art {
+.bio-banner-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.bio-banner-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+.bio-banner-slide img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 20px;
+}
+.bio-banner-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bio-banner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.bio-banner-dot.active {
+  background: #eac794;
+  width: 24px;
+  border-radius: 4px;
 }
 
 /* ===== INTRO ===== */
@@ -269,8 +291,7 @@ body {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .bio-page { padding: 24px 16px 40px; }
-  .bio-banner { border-radius: 14px; }
-  .bio-banner-art { border-radius: 14px; }
+  .bio-banner-carousel { border-radius: 14px; }
   .bio-intro h2 { font-size: 22px; }
   .bio-row--2 { grid-template-columns: 1fr 1fr; }
   .bio-row--3 { grid-template-columns: 1fr 1fr; }
