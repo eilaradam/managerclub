@@ -96,7 +96,7 @@
         <h3>An&aacute;lise de<br>Portf&oacute;lio</h3>
         <p>Feedback individual do seu portf&oacute;lio de gestora.</p>
       </a>
-      <a href="#" class="bio-card bio-card--light">
+      <a href="#" onclick="event.preventDefault(); document.getElementById('mc-modal').style.display='flex';" class="bio-card bio-card--light">
         <span class="bio-card-ribbon">EM BREVE</span>
         <span class="bio-card-tag">AO VIVO</span>
         <h3>Master<br>Class</h3>
@@ -148,7 +148,34 @@
 
     <p class="bio-footer">&copy; 2026 Lara Dam. Todos os direitos reservados.</p>
   </div>
+
+  <!-- Modal Master Class -->
+  <div class="mc-modal" id="mc-modal" onclick="if(event.target===this)this.style.display='none'">
+    <div class="mc-modal-box">
+      <button class="mc-modal-close" onclick="document.getElementById('mc-modal').style.display='none'">&times;</button>
+      <div class="mc-modal-icon">&#128640;</div>
+      <h3>Dispon&iacute;vel em breve!</h3>
+      <p>Se inscreva para receber em primeira m&atilde;o quando a Master Class abrir.</p>
+      <form id="mc-form" onsubmit="return submitMCForm(event)">
+        <input type="email" id="mc-email" placeholder="Seu melhor e-mail" required>
+        <button type="submit">QUERO SER AVISADA</button>
+      </form>
+      <p class="mc-modal-success" id="mc-success" style="display:none;">Pronto! Voc&ecirc; ser&aacute; avisada em primeira m&atilde;o.</p>
+    </div>
+  </div>
 <script>
+// Master Class form - salva emails no localStorage (migrar pra Supabase depois)
+function submitMCForm(e) {
+  e.preventDefault();
+  var email = document.getElementById('mc-email').value;
+  var emails = JSON.parse(localStorage.getItem('mc_emails') || '[]');
+  emails.push({ email: email, date: new Date().toISOString() });
+  localStorage.setItem('mc_emails', JSON.stringify(emails));
+  document.getElementById('mc-form').style.display = 'none';
+  document.getElementById('mc-success').style.display = 'block';
+  return false;
+}
+
 let currentBanner = 0;
 const totalBanners = 2;
 function goToBanner(i) {

@@ -350,6 +350,91 @@ body {
   color: #bbb;
 }
 
+/* ===== MODAL MASTER CLASS ===== */
+.mc-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.mc-modal-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.mc-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+.mc-modal-close:hover { color: #000; }
+.mc-modal-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+.mc-modal-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 8px;
+}
+.mc-modal-box p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+#mc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#mc-email {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#mc-email:focus { border-color: #eac794; }
+#mc-form button {
+  width: 100%;
+  padding: 14px;
+  background: #ae1405;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#mc-form button:hover { background: #8f1004; }
+.mc-modal-success {
+  color: #22C55E !important;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .bio-page { padding: 24px 16px 40px; }
