@@ -43,11 +43,13 @@ body {
 .bio-banner-slide {
   width: 50%;
   flex-shrink: 0;
+  height: 300px;
 }
 .bio-banner-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 .bio-banner-arrow {
   position: absolute;
