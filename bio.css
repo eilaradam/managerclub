@@ -403,7 +403,9 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-#mc-email {
+#mc-form input[type="text"],
+#mc-form input[type="email"],
+#mc-form input[type="tel"] {
   width: 100%;
   padding: 14px 18px;
   border: 2px solid #eee;
@@ -412,8 +414,9 @@ body {
   font-size: 15px;
   outline: none;
   transition: border-color 0.2s;
+  box-sizing: border-box;
 }
-#mc-email:focus { border-color: #eac794; }
+#mc-form input:focus { border-color: #eac794; }
 #mc-form button {
   width: 100%;
   padding: 14px;

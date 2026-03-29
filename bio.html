@@ -157,7 +157,9 @@
       <h3>Dispon&iacute;vel em breve!</h3>
       <p>Se inscreva para receber em primeira m&atilde;o quando a Master Class abrir.</p>
       <form id="mc-form" onsubmit="return submitMCForm(event)">
+        <input type="text" id="mc-name" placeholder="Seu nome completo" required>
         <input type="email" id="mc-email" placeholder="Seu melhor e-mail" required>
+        <input type="tel" id="mc-phone" placeholder="Seu telefone (WhatsApp)" required>
         <button type="submit">QUERO SER AVISADA</button>
       </form>
       <p class="mc-modal-success" id="mc-success" style="display:none;">Pronto! Voc&ecirc; ser&aacute; avisada em primeira m&atilde;o.</p>
@@ -167,10 +169,12 @@
 // Master Class form - salva emails no localStorage (migrar pra Supabase depois)
 function submitMCForm(e) {
   e.preventDefault();
+  var name = document.getElementById('mc-name').value;
   var email = document.getElementById('mc-email').value;
-  var emails = JSON.parse(localStorage.getItem('mc_emails') || '[]');
-  emails.push({ email: email, date: new Date().toISOString() });
-  localStorage.setItem('mc_emails', JSON.stringify(emails));
+  var phone = document.getElementById('mc-phone').value;
+  var leads = JSON.parse(localStorage.getItem('mc_leads') || '[]');
+  leads.push({ name: name, email: email, phone: phone, date: new Date().toISOString() });
+  localStorage.setItem('mc_leads', JSON.stringify(leads));
   document.getElementById('mc-form').style.display = 'none';
   document.getElementById('mc-success').style.display = 'block';
   return false;
