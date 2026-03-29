@@ -137,7 +137,7 @@ let currentBanner = 0;
 const totalBanners = 2;
 function goToBanner(i) {
   currentBanner = i;
-  document.getElementById('bio-banner-track').style.transform = 'translateX(-' + (i * 100) + '%)';
+  document.getElementById('bio-banner-track').style.transform = 'translateX(-' + (i * 50) + '%)';
   document.querySelectorAll('.bio-banner-dot').forEach(function(d, idx) {
     d.classList.toggle('active', idx === i);
   });

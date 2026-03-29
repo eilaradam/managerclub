@@ -28,17 +28,20 @@ body {
 .bio-banner-carousel {
   position: relative;
   margin-bottom: 48px;
-}
-.bio-banner-viewport {
   overflow: hidden;
   border-radius: 16px;
 }
+.bio-banner-viewport {
+  overflow: hidden;
+  width: 100%;
+}
 .bio-banner-track {
   display: flex;
+  width: 200%;
   transition: transform 0.5s ease;
 }
 .bio-banner-slide {
-  min-width: 100%;
+  width: 50%;
   flex-shrink: 0;
 }
 .bio-banner-slide img {
@@ -66,16 +69,19 @@ body {
 .bio-banner-prev { left: 12px; }
 .bio-banner-next { right: 12px; }
 .bio-banner-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 12px;
 }
 .bio-banner-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.4);
   cursor: pointer;
   transition: all 0.2s;
 }
