@@ -71,13 +71,15 @@ body {
   line-height: 1.6;
 }
 
-/* ===== GRID DE CARDS ===== */
-.bio-grid {
+/* ===== ROWS DE CARDS ===== */
+.bio-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-  margin-bottom: 48px;
+  margin-bottom: 14px;
 }
+.bio-row--2 { grid-template-columns: 1fr 1fr; }
+.bio-row--3 { grid-template-columns: 1fr 1fr 1fr; }
+.bio-row:last-of-type { margin-bottom: 48px; }
 .bio-card {
   border-radius: 16px;
   padding: 22px 20px;
@@ -115,8 +117,6 @@ body {
   margin-top: auto;
 }
 
-/* Card wide - only on mobile */
-.bio-card--wide { }
 
 /* Card dark */
 .bio-card--dark {
@@ -280,8 +280,8 @@ body {
   .bio-banner { border-radius: 14px; }
   .bio-banner-art { border-radius: 14px; }
   .bio-intro h2 { font-size: 22px; }
-  .bio-grid { grid-template-columns: 1fr 1fr; }
-  .bio-card--wide { grid-column: span 2; }
+  .bio-row--2 { grid-template-columns: 1fr 1fr; }
+  .bio-row--3 { grid-template-columns: 1fr 1fr; }
   .bio-card { min-height: 140px; }
   .bio-card { min-height: 160px; padding: 18px 16px; }
   .bio-card h3 { font-size: 16px; }
