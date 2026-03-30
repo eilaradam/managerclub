@@ -133,9 +133,9 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
+  left: -50%;
+  right: -50%;
+  height: 35%;
   background: linear-gradient(to bottom, transparent, #FFF8F2);
   pointer-events: none;
   z-index: 1;
